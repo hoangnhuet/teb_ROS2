@@ -2,6 +2,7 @@
 #include"teb_planner/include/obstacle/obstacle.h"
 #include<iostream>
 using namespace teb_local_planner;
+int z = 0;
 testObs::testObs(): Node("test_obs")
 {
     scan_sub = this->create_subscription<sensor_msgs::msg::LaserScan>("/scan", 10, std::bind(&testObs::scanCallback, this, std::placeholders::_1));
